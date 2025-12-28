@@ -41,3 +41,22 @@ chmod +x ./insert_data.sh
 chmod +x ./queries.sh
 ./insert_data.sh
 ./queries.sh
+pg_dump -cC --inserts -U freecodecamp worldcup > worldcup.sql
+psql -U freecodecamp < worldcup.sql
+psql -U postgres < worldcup.sql
+./insert_data.sh
+psql --username=freecodecamp --dbname=worldcup -c "SELECT COUNT(*) FROM teams;"
+psql --username=freecodecamp --dbname=worldcup -c "SELECT COUNT(*) FROM games;"
+pg_dump -cC --inserts -U freecodecamp worldcup > worldcup.sql
+git add worldcup.sql insert_data.sh queries.sh
+git commit -m "Final fix for World Cup Database project"
+git push
+git remote add origin https://github.com/v1nxthkumar/rdb-alpha.git
+git push -u origin main
+__vsc_prompt_cmd_original
+__vsc_prompt_cmd_original
+git branch
+git push -u origin master
+git remote remove origin
+git remote add origin https://github.com/v1nxthkumar/rdb-alpha.git
+git push -u origin master
