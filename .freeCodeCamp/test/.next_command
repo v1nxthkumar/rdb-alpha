@@ -60,3 +60,4 @@ git push -u origin master
 git remote remove origin
 git remote add origin https://github.com/v1nxthkumar/rdb-alpha.git
 git push -u origin master
+git remote remove origin
